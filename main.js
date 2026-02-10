@@ -1,5 +1,8 @@
+ const Reload = document.getElementById("Reload")
 
-
+ Reload.addEventListener("click", ()=>{
+   location.reload()
+ })
 
 
 //the  interface  section 
@@ -99,8 +102,7 @@ const browserView = document.getElementById("browserView");
 const ContentWrapper = document.querySelector(".content-wrapper")
 searchBtn.addEventListener("click", ()=>{
 
-  searchFrame.style = "z-index: 1;"
-ContentWrapper.style = " z-index: 0;"
+
 
 const searchBar = document.getElementById("searchBar").value
 console.log(searchBar)
