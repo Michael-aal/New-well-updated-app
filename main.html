@@ -1,0 +1,638 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRY PTI Browser </title>
+    <script src="https://kit.fontawesome.com/4d39e4a0f3.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="main.css">
+
+</head>
+<body >
+    <div class="browser-container">
+        <!-- Browser Header -->
+        <div class="browser-header">
+          
+
+            <div class="nav-bar">
+                <div class="nav-buttons">
+                    <button class="nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="nav-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+
+                <div class="search-bar">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <form action="https://google.com">
+                    <input class="InputUrl" type="text" name="search" placeholder="Search or type a URL">
+                    </form>
+                </div>
+
+                <div class="profile">
+                     <div class="user-avatar">M</div>
+                </div>
+          
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu Bar -->
+        <div class="mobile-menu-bar">
+            <button class="mobile-menu-btn" id="toggleSidebar">☰</button>
+            <button class="mobile-menu-btn" id="toggleRightPanel">. . .</button>
+        </div>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar"> 
+                <button class="close-btn" id="closeSidebar">×</button>
+                <div class="sidebar-content"  style="padding-bottom: 50px;">
+                    <!-- Workspaces -->
+                    <div class="workspace-item active">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <span>Work</span>
+                        <div class="notification-dot"></div>
+                    </div>
+                    <div class="workspace-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Home</span>
+                        <div class="notification-dot"></div>
+                    </div>
+                    <div class="workspace-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>Private</span>
+                    </div>
+
+                    <!-- Shortcuts -->
+                    <div class="section-title">Shortcuts</div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon blue">B</div>
+                        <span>Behance</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon pink">D</div>
+                        <span>Dribbble</span>
+                        <div class="notification-dot green"></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon purple">F</div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon instagram">I</div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon red">P</div>
+                        <span>Pinterest</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon blue">Y</div>
+                        <span>YouTube</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon linkedin">L</div>
+                        <span>LinkedIn</span>
+                        <div class="notification-dot green"></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-icon gray">+</div>
+                        <span>Add</span>
+                    </div>
+
+                    <!-- VPN Section -->
+                    <div class="vpn-section">
+                        <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            
+                            <span style="flex: 1;">VPN</span>
+                            <span style="font-size: 12px; color: #9ca3af;">78.05</span>
+                            <div class="toggle-switch"></div>
+                        </div>
+
+                              
+     <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Screenshot protect</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch screenshot"></div>
+                        </div>
+
+
+                                
+     <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Screen share Invisibility</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch screenshare"></div>
+                        </div>
+
+
+
+                                
+     <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Ads blocker Pro</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch Ads"></div>
+                        </div>
+
+
+
+                         <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Invisible Email</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch invisible"></div>
+                        </div>
+
+
+                         <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Pin & Color Tabs</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch Pin"></div>
+                        </div>
+
+
+                         <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Private Mode</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch Private"></div>
+                        </div>
+
+                         <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+              
+                            <span style="flex: 1;">Zero performance</span>
+                            <span style="font-size: 12px; color: #9ca3af;"></span>
+                            <div class="toggle-switch zero"></div>
+                        </div>
+                         
+     <div class="shortcut-item" style="background: rgba(16, 185, 129, 0.1);">
+                            <div style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <span style="flex: 1;">Not protected</span>
+                            <span style="font-size: 12px;">284.99 S</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            
+                            <span style="flex: 1;">Secure Tunnel</span>
+                            <div style="width: 16px; height: 16px; background: #4b5563; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 8px; height: 8px; background: #6b7280; border-radius: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Icons -->
+                    <div style="display: flex; justify-content: space-between; padding: 16px 12px 0; border-top: 1px solid #3a3d4f; margin-top: 16px;">
+                        <button class="nav-btn">+</button>
+                        <button class="nav-btn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </button>
+                        <button class="nav-btn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+
+
+
+            <main class="main-content screen"  >
+        <iframe id="searchFrame" src=""  height="100vh" width="100%"  >
+
+             </iframe>
+                <div class="content-wrapper">
+                    <!-- Shield Status -->
+                    <div class="shield-status">
+                        <div class="shield-icon">
+                            <div class="shield-glow"></div>
+                            <div class="shield-circle">
+                                <svg class="shield-svg" viewBox="0 0 24 24">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="trackers-blocked">85 TRACKERS BLOCKED</div>
+                    </div>
+
+                    <!-- Search Section -->
+                    <div class="search-section">
+                        <div class="main-search">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                            <input id="searchBar" type="text" placeholder="Search web or type a command...">
+                             <div class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                             </div>
+                            
+                        </div>
+
+                        <div class="tab-navigation">
+                            <div class="tab-nav-item active">Web</div>
+                            <div class="tab-nav-item">Files</div>
+                            <div class="tab-nav-item">History</div>
+                            <div class="tab-nav-item">Tabs</div>
+                        </div>
+                    </div>
+
+                    <!-- Engine Card -->
+                    <div class="engine-card">
+                        <div class="engine-header">
+                            <div class="engine-icon">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                            <div class="engine-name">Brave Search - Default</div>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6-4.2 4.2M23 12h-6m-6 0H1m18.2-5.2-4.2 4.2m0 6-4.2 4.2"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="action-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Open a private tab</span>
+                        </div>
+                        <div class="action-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path>
+                            </svg>
+                            <span>Clear history, cookies, and cache</span>
+                        </div>
+                        <div class="action-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6-4.2 4.2M23 12h-6m-6 0H1m18.2-5.2-4.2 4.2m0 6-4.2 4.2"></path>
+                            </svg>
+                            <span>Manage extensions</span>
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" style="margin-left: auto;">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </div>
+                        <div class="action-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span>Search with Google</span>
+                        </div>
+
+                        <!-- Tab Categories -->
+                        <div class="tab-categories">
+                            <button class="category-btn active">Work</button>
+                            <button class="category-btn">Home</button>
+                            <button class="category-btn">Private</button>
+                            <button class="category-btn">Tabs</button>
+                            <button class="category-btn">More</button>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="quick-links">
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: #3b82f6;">B</div>
+                                <div class="quick-link-name">Behance</div>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: #ec4899;">D</div>
+                                <div class="quick-link-name">Dribbble</div>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: #8b5cf6;">F</div>
+                                <div class="quick-link-name">Figma</div>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: linear-gradient(135deg, #fbbf24, #ec4899, #8b5cf6);">I</div>
+                                <div class="quick-link-name">Instagram</div>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: #dc2626;">Y</div>
+                                <div class="quick-link-name">YouTube</div>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <div class="quick-link-icon" style="background: #1e40af;">L</div>
+                                <div class="quick-link-name">LinkedIn</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Section -->
+                    <div class="featured-section">
+                        <div class="featured-header">
+                            
+                            <div class="section-title">
+                <h2>Military-Grade <span class="gradient-text">Privacy Features</span></h2>
+                <p class="text-lead">Protection that actually works when you need it most</p>
+            </div>
+
+                       <div class="feature-grid">
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🛡️" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f6e1.svg"></span>
+                    <h3>Screenshot Protection</h3>
+                    <p>All dialogs are completely invisible to screenshots, screen recording software, and malware screen capture attempts. Your sensitive data stays yours.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📹" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4f9.svg"></span>
+                    <h3>Screen Share Invisibility</h3>
+                    <p>Share your entire screen on Zoom, Teams, or Meet without worry. Sensitive windows appear as black screens to viewers while you see everything normally.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🔒" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f512.svg"></span>
+                    <h3>Password Manager</h3>
+                    <p>Built-in encrypted password manager with show/hide toggle. Save, manage, and auto-fill passwords across all your accounts securely.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🚫" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f6ab.svg"></span>
+                    <h3>Ad Blocker Pro</h3>
+                    <p>Advanced ad blocker with real-time counter. Blocks ads while allowing video content. Toggle on/off from navbar. Fast, efficient, invisible.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📥" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4e5.svg"></span>
+                    <h3>Download Manager</h3>
+                    <p>Full-featured download manager with pause/resume, history tracking, and file organization. Never lose a download again.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="✉️" src="https://s.w.org/images/core/emoji/17.0.2/svg/2709.svg"></span>
+                    <h3>Invisible Email</h3>
+                    <p>Send emails invisibly during screen shares. Perfect for emergencies or discreet communication without anyone knowing.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📌" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4cc.svg"></span>
+                    <h3>Pin &amp; Color Tabs</h3>
+                    <p>Pin important tabs and color-code them for instant recognition. Organize your workflow like never before.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🔐" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f510.svg"></span>
+                    <h3>Private Mode</h3>
+                    <p>True private browsing with no history, cookies, or cache. Leave no trace behind when you need maximum privacy.</p>
+                </div>
+
+                <div class="card fade-in-up">
+                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="⚡" src="https://s.w.org/images/core/emoji/17.0.2/svg/26a1.svg"></span>
+                    <h3>Zero Performance Impact</h3>
+                    <p>Built with efficiency in mind. All protection features run with zero noticeable performance impact on your system.</p>
+                </div>
+            </div>
+            </main>
+            
+                    </div>
+                </div>
+
+            <!-- Right Panel -->
+            <aside class="right-panel" id="rightPanel">
+                <button class="close-btn" id="closeRightPanel">×</button>
+                <div class="right-panel-content">
+                    <!-- VPN Status -->
+                    <div class="vpn-status-card">
+                        <div class="vpn-status-left">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                            </svg>
+                            <span style="font-size: 14px;">CLuodn VPN</span>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+
+                    <!-- Stats Items -->
+                    <div style="margin-bottom: 24px;">
+                        <div class="stat-item">
+                            <div class="stat-item-left">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span style="color: #d1d5db;">Trailt Blocked</span>
+                            </div>
+                            <div class="stat-item-right">
+                                <span>86</span>
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item-left">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span style="color: #d1d5db;">Fingerprinting resistant</span>
+                            </div>
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item-left">
+                                <div style="width: 16px; height: 16px; background: #4b5563; border-radius: 50%;"></div>
+                                <span style="color: #d1d5db;">Quick Suggestions</span>
+                            </div>
+                            <div class="toggle-switch off"></div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item-left">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span style="color: #d1d5db;">I ionninitialize</span>
+                            </div>
+                            <div class="stat-item-right">
+                                <span style="font-size: 12px;">5Gb</span>
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Card -->
+                    <div style="margin-bottom: 24px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 14px;">Featured</h3>
+                            <div class="toggle-switch"></div>
+                        </div>
+                        <div style="background: #1a1d2e; border-radius: 12px; overflow: hidden;">
+                            <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600" alt="Featured" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="padding: 12px;">
+                                <div style="font-size: 12px; color: #d1d5db; margin-bottom: 4px;">1 P T ? Creek ore stoes</div>
+                                <div style="font-size: 11px; color: #6b7280; margin-bottom: 8px;">stressed with solnos notings. $ is matrice commodiclity.</div>
+                                <div style="font-size: 11px; color: #6b7280; display: flex; align-items: center; gap: 4px;">
+                                    <span>👁</span>
+                                    <span>Ndsn externe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">134</div>
+                            <div class="stat-label">Trackers blocked</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">87</div>
+                            <div class="stat-label">scripts blocked</div>
+                        </div>
+                        <div class="stat-card stat-icon-card">
+                            <div class="stat-icon-bg">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-label">Fingerprinting</div>
+                        </div>
+                    </div>
+
+                    <!-- Encrypted Mode -->
+                    <div style="margin-top: 24px;">
+                        <div class="vpn-status-card">
+                            <div class="vpn-status-left">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span style="font-size: 14px;">Encrypted Mode</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6-4.2 4.2M23 12h-6m-6 0H1m18.2-5.2-4.2 4.2m0 6-4.2 4.2"></path>
+                                </svg>
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0 8px; margin-top: 12px; font-size: 12px; color: #6b7280;">
+                            <button style="display: flex; align-items: center; gap: 4px; background: transparent; border: none; color: inherit; cursor: pointer;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>0</span>
+                            </button>
+                            <button style="display: flex; align-items: center; gap: 4px; background: transparent; border: none; color: inherit; cursor: pointer;">
+                                <div style="width: 12px; height: 12px; background: #4b5563; border-radius: 2px;"></div>
+                                <span>Qiaom</span>
+                            </button>
+                            <button style="display: flex; align-items: center; gap: 4px; background: transparent; border: none; color: inherit; cursor: pointer;">
+                                <div style="width: 12px; height: 12px; background: #4b5563; border-radius: 2px;"></div>
+                                <span>Qm</span>
+                            </button>
+                            <button style="background: transparent; border: none; color: inherit; cursor: pointer; padding: 4px;">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6m5.2-13.2-4.2 4.2m0 6-4.2 4.2M23 12h-6m-6 0H1m18.2-5.2-4.2 4.2m0 6-4.2 4.2"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+
+        
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+        
+    </div>
+
+
+
+    <script src="main.js"></script>
+    <script src="SSP.js"></script>
+    <script src="engine.js"></script>
+    <script src="SSI.JS"></script>
+    <script src="password.js"></script>
+</body>
+</html>
+
+</body>
+</html>
