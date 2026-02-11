@@ -1,8 +1,3 @@
- const Reload = document.getElementById("Reload")
-
- Reload.addEventListener("click", ()=>{
-   location.reload()
- })
 
 
 //the  interface  section 
