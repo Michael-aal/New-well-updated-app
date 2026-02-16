@@ -3,6 +3,8 @@
             const resultsDiv = document.getElementById('results');
             const loading = document.getElementById('loading');
             const screen = document.querySelector(".screen")
+            const InputUrl = document.querySelector(".InputUrl")
+      
             if (!query) return;
 
             // Setup
@@ -16,7 +18,7 @@
                         'X-API-KEY': 'd32e7442a85a07205e089f17093cf2f785149944', // <--- PASTE KEY HERE
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ q: query })
+                    body: JSON.stringify({ q: query ,InputUrl})
                 });
 
                 const data = await response.json();
@@ -48,6 +50,11 @@
 
         // Allow "Enter" key to trigger search
         document.getElementById('query').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        
+         InputUrl.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') performSearch();
         });
 
