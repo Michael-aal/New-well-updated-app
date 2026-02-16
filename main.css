@@ -830,7 +830,8 @@ font-weight: 900;
 
           .search-bar{
             display: flex;
-            align-items: baseline;
+            padding-left: 10px;
+            align-items: center;
             justify-content: baseline;
             width: 70%;
             border-radius: 5px;
@@ -920,7 +921,8 @@ font-weight: 900;
 
           .search-bar{
             display: flex;
-            align-items: baseline;
+            padding-left: 10px;
+            align-items: center;
             justify-content: baseline;
             width: 70%;
             border-radius: 5px;
@@ -1457,7 +1459,8 @@ font-weight: 900;
 
           .search-bar{
             display: flex;
-            align-items: baseline;
+            padding-left: 10px;
+            align-items: center;
             justify-content: baseline;
             width: 70%;
             border-radius: 5px;
