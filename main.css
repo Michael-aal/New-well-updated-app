@@ -19,7 +19,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
            color: white;
+
+
         }
+
 
         .browser-container {
             height: 100vh;
@@ -913,6 +916,8 @@ font-weight: 900;
             width: 90%;
             border: 1px solid lightgray;
             background-color: #06140c;
+                        color: white;
+
             justify-content: space-between;
             border-radius: 10px;
             align-items: center;
@@ -941,6 +946,7 @@ font-weight: 900;
           }
 
           #query{
+            color: white;
                  border: none;
             width: 250px;
             background-color: transparent;
@@ -969,6 +975,7 @@ font-weight: 900;
             width: 90%;
             border: 1px solid lightgray;
             background-color: #06140c;
+                        color: white;
             justify-content: space-between;
             border-radius: 10px;
 
@@ -995,6 +1002,7 @@ font-weight: 900;
           }
 
           #query{
+                        color: white;
                  border: none;
             width: 250px;
             background-color: transparent;
@@ -1135,6 +1143,11 @@ font-weight: 900;
                 padding: 12px;
                 margin-bottom: 12px;
             }
+
+            
+        #results{
+           padding: 20px; 
+        }
             
             .engine-card {
                 padding: 12px;
@@ -1235,9 +1248,10 @@ font-weight: 900;
             
           .main-search{
             display: flex;
-            width: 90%;
+            width: 80%;
             border: 1px solid lightgray;
             background-color: #06140c;
+                        color: white;
             justify-content: space-between;
             border-radius: 10px;
 
@@ -1264,6 +1278,7 @@ font-weight: 900;
           }
 
           #query{
+            color: white;
                  border: none;
             width: 250px;
             background-color: transparent;
@@ -1302,8 +1317,7 @@ font-weight: 900;
                
             }
 
-            
-            
+
                 .search_base{
                         
                     height: 60vh;
@@ -1316,9 +1330,10 @@ font-weight: 900;
             
           .main-search{
             display: flex;
-            width: 90%;
+            width: 70%;
             border: 1px solid lightgray;
             background-color: #06140c;
+                        color: white;
             justify-content: space-between;
             border-radius: 10px;
 
@@ -1338,6 +1353,7 @@ font-weight: 900;
           }
 
           #query{
+                        color: white;
                  border: none;
             width: 250px;
             background-color: transparent;
@@ -1385,6 +1401,21 @@ font-weight: 900;
                 padding: 6px;
                 font-size: 14px;
             }
+
+            .G_result{
+                width: 100%;
+                height: fit-content;
+                padding: 20px;
+            }
+        
+        #results{
+        display: flex;
+        border: 1px solid;
+        flex-direction: column;
+         max-width: 380px; 
+         flex-wrap: wrap;
+         padding: 20px;
+        }
         }
         
         /* Tablet specific adjustments */
@@ -1451,6 +1482,7 @@ font-weight: 900;
             width: 90%;
             border: 1px solid lightgray;
             background-color: #06140c;
+            color: white;
             justify-content: space-between;
             border-radius: 10px;
             align-items: center;

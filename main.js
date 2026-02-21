@@ -91,32 +91,4 @@
             });
         });
 
-      
-const searchBtn = document.querySelector(".search")
-const browserView = document.getElementById("browserView");
-const ContentWrapper = document.querySelector(".content-wrapper")
-searchBtn.addEventListener("click", ()=>{
-
-
-
-const searchBar = document.getElementById("searchBar").value
-console.log(searchBar)
-
-TRim()
- 
-const query = searchBar.value
-
-if (query) {
-  searchFrame.src = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-  console.log(query)
-}
-
-
-})
-
-function TRim(){
-  const searchBar = document.getElementById("searchBar").value = null
-
-}
-
 
