@@ -55,7 +55,7 @@
 
   if (!query) return;
 
-  Results.innerHTML += `<p><strong>You:</strong> ${query}</p>`;
+//   Results.innerHTML += `<p><strong>You:</strong> ${query}</p>`;
 
   const response = await fetch("http://localhost:3000/chat", {
     method: "POST",
