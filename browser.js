@@ -5,7 +5,6 @@
             const resultsDiv = document.getElementById('result');
             const Results = document.querySelector(".G_result")
             const loading = document.getElementById('loading');
-            const screen = document.querySelector(".screen")
             const Gremove = document.querySelector(".G_result")
             Gremove.style = "display: none;"
 
@@ -77,4 +76,12 @@
 
         
     
-
+      const sidebar = document.getElementById('sidebar');
+        const rightPanel = document.getElementById('rightPanel');
+        const overlay = document.getElementById('overlay');
+       
+            const screen = document.querySelector(".screen")
+                 screen.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });

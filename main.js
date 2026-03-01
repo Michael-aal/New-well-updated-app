@@ -3,6 +3,7 @@
 //the  interface  section 
 
         // Get elements
+        const screen = document.querySelector(".screen")
         const sidebar = document.getElementById('sidebar');
         const rightPanel = document.getElementById('rightPanel');
         const overlay = document.getElementById('overlay');
@@ -15,6 +16,8 @@
         toggleSidebar.addEventListener('click', () => {
             sidebar.classList.add('active');
             overlay.classList.add('active');
+
+            screen.style = "           filter: blur(12px); "
         });
 
         // Toggle right panel
@@ -25,6 +28,12 @@
 
         // Close sidebar
         closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+                // const screen = document.querySelector(".screen")
+                 screen.addEventListener('click', () => {
             sidebar.classList.remove('active');
             overlay.classList.remove('active');
         });
