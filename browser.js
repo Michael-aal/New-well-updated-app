@@ -1,14 +1,14 @@
     async function SearchBTN() {
-      location.href = "browser.html"
-             const  query = document.getElementById('query').value;
+     
+
+            const query = document.getElementById("querys").value
             const resultsDiv = document.getElementById('results');
             const Results = document.querySelector(".G_result")
             const loading = document.getElementById('loading');
             const screen = document.querySelector(".screen")
-            // const InputUrl = document.querySelector(".InputUrl")
-          
-          
-            console.log(query)
+
+        
+
             if (!query) return;
 
             // Setup
@@ -71,7 +71,7 @@
         }
 
         // Allow "Enter" key to trigger search
-        document.getElementById('query').addEventListener('keypress', (e) => {
+        document.getElementById('querys').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') SearchBTN();
         });
 

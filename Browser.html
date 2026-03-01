@@ -1,33 +1,40 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="browser.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="main.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QRY PTI Browser </title>
-    <script src="https://kit.fontawesome.com/4d39e4a0f3.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="main.css">
-
+    <title >Qrypti browser</title>
 </head>
-<body >
+<body>
     <div class="browser-container">
         <!-- Browser Header -->
-        <div class="browser-header">
+        <div class="browser-headers">
           
 
             <div class="nav-bar">
+                
               <div class="title">
+    <div class="shield-status">
+                        <div class="shield-icons">
+                            <div class="shield-glows"></div>
+                            <div class="shield-circles">
+                                <svg class="shield-svgs" viewBox="0 0 24 24">
+                                    <path  d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                     
+                    </div>
+
                 QRY PTI
               </div>
 
-                <!-- <div class="search-bar">
-              
-                    
-                    <input class="InputUrl" type="text" name="search" placeholder="Search or type a URL">
-                    
-                </div> -->
 
                 <div class="profile">
-                     <div class="user-avatar">A</div>
+                     <div class="user-avatar">M</div>
                 </div>
           
 
@@ -36,7 +43,17 @@
 
         <!-- Mobile Menu Bar -->
         <div class="mobile-menu-bar">
-            <button class="mobile-menu-btn" id="toggleSidebar">☰</button>
+            <button class="mobile-menu-btns" id="toggleSidebar">☰</button>
+
+                <div class="search-bars">
+              
+                    
+                    <input class="InputUrls" id="querys" type="text" name="search" placeholder="Search or type a URL">
+                        <div class="searchs" onclick="SearchBTN()">
+                              send
+                             </div>
+                </div>
+            
             <button class="mobile-menu-btn" id="toggleRightPanel">. . .</button>
         </div>
 
@@ -53,7 +70,7 @@
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                         </svg>
                         <span>Work</span>
-                        <div class="notification-dot"></div>
+               
                     </div>
                     <div class="workspace-item">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -71,42 +88,7 @@
                         <span>Private</span>
                     </div>
 
-                    <!-- Shortcuts -->
-                    <div class="section-title">Shortcuts</div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon blue">B</div>
-                        <span>Behance</span>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon pink">D</div>
-                        <span>Dribbble</span>
-                        <div class="notification-dot green"></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon purple">F</div>
-                        <span>Figma</span>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon instagram">I</div>
-                        <span>Instagram</span>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon red">P</div>
-                        <span>Pinterest</span>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon blue">Y</div>
-                        <span>YouTube</span>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon linkedin">L</div>
-                        <span>LinkedIn</span>
-                        <div class="notification-dot green"></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-icon gray">+</div>
-                        <span>Add</span>
-                    </div>
+   
 
                     <!-- VPN Section -->
                     <div class="vpn-section">
@@ -134,6 +116,9 @@
                             <span style="font-size: 12px; color: #9ca3af;"></span>
                             <div class="toggle-switch screenshot"></div>
                         </div>
+
+
+
 
 
                                 
@@ -259,42 +244,14 @@
 
 
 
-            <main class="main-content screen"  >
-        <div class="shape">
-            <div class="circle"></div>
-        </div>
+            <main class="main-content screen">
+        
                 <div class="content-wrapper">
                     <div class="search_base">
                     <!-- Shield Status -->
-                    <div class="shield-status">
-                        <div class="shield-icon">
-                            <div class="shield-glow"></div>
-                            <div class="shield-circle">
-                                <svg class="shield-svg" viewBox="0 0 24 24">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="trackers-blocked">QRYPTI  SEARCH</div>
-                    </div>
+                
 
-                    <!-- Search Section -->
-                    <div class="search-section">
-                        <div class="main-search">
-             
-                            <div class="search" onclick="SearchBTN()">
-                    
-                            Search now
-                        
-                            </div>
-                            
-                             
-                        </div>
-                        </div>    
-                     </div>
-
-
-       
+                 
 
 
          <div id="loading">Searching...</div>
@@ -303,132 +260,12 @@
 
           
 
-          
-
       
 
-                    <!-- Engine Card -->
-                    <div class="engine-card">
-            
+                 
 
+<script  src="../Search Engine/browser.js"></script>
+                 
 
-                        <!-- Quick Links -->
-                        <div class="quick-links">
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: #3b82f6;">B</div>
-                                <div class="quick-link-name">Behance</div>
-                            </a>
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: #ec4899;">D</div>
-                                <div class="quick-link-name">Dribbble</div>
-                            </a>
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: #8b5cf6;">F</div>
-                                <div class="quick-link-name">Figma</div>
-                            </a>
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: linear-gradient(135deg, #fbbf24, #ec4899, #8b5cf6);">I</div>
-                                <div class="quick-link-name">Instagram</div>
-                            </a>
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: #dc2626;">Y</div>
-                                <div class="quick-link-name">YouTube</div>
-                            </a>
-                            <a href="#" class="quick-link">
-                                <div class="quick-link-icon" style="background: #1e40af;">L</div>
-                                <div class="quick-link-name">LinkedIn</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Featured Section -->
-                    <div class="featured-section">
-                        <div class="featured-header">
-                            
-                            <div class="section-title">
-                <h2>Military-Grade <span class="gradient-text">Privacy Features</span></h2>
-                <p class="text-lead">Protection that actually works when you need it most</p>
-            </div>
-
-                       <div class="feature-grid">
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🛡️" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f6e1.svg"></span>
-                    <h3>Screenshot Protection</h3>
-                    <p>All dialogs are completely invisible to screenshots, screen recording software, and malware screen capture attempts. Your sensitive data stays yours.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📹" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4f9.svg"></span>
-                    <h3>Screen Share Invisibility</h3>
-                    <p>Share your entire screen on Zoom, Teams, or Meet without worry. Sensitive windows appear as black screens to viewers while you see everything normally.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🔒" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f512.svg"></span>
-                    <h3>Password Manager</h3>
-                    <p>Built-in encrypted password manager with show/hide toggle. Save, manage, and auto-fill passwords across all your accounts securely.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🚫" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f6ab.svg"></span>
-                    <h3>Ad Blocker Pro</h3>
-                    <p>Advanced ad blocker with real-time counter. Blocks ads while allowing video content. Toggle on/off from navbar. Fast, efficient, invisible.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📥" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4e5.svg"></span>
-                    <h3>Download Manager</h3>
-                    <p>Full-featured download manager with pause/resume, history tracking, and file organization. Never lose a download again.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="✉️" src="https://s.w.org/images/core/emoji/17.0.2/svg/2709.svg"></span>
-                    <h3>Invisible Email</h3>
-                    <p>Send emails invisibly during screen shares. Perfect for emergencies or discreet communication without anyone knowing.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="📌" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f4cc.svg"></span>
-                    <h3>Pin &amp; Color Tabs</h3>
-                    <p>Pin important tabs and color-code them for instant recognition. Organize your workflow like never before.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="🔐" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f510.svg"></span>
-                    <h3>Private Mode</h3>
-                    <p>True private browsing with no history, cookies, or cache. Leave no trace behind when you need maximum privacy.</p>
-                </div>
-
-                <div class="card fade-in-up">
-                    <span class="icon"><img draggable="false" role="img" class="emoji" alt="⚡" src="https://s.w.org/images/core/emoji/17.0.2/svg/26a1.svg"></span>
-                    <h3>Zero Performance Impact</h3>
-                    <p>Built with efficiency in mind. All protection features run with zero noticeable performance impact on your system.</p>
-                </div>
-            </div>
-            </main>
-            
-                    </div>
-                </div>
-
-           
-
-
-    <script type="module" src="main.js"></script>
-    <script src="../security features/SSI.JS"></script>
-    <!-- <script src="engine.js"></script> -->
-    <script src="../security features/SSP.js"></script>
-    <!-- <script src="password.js"></script> -->
-    <script src="../Search Engine/api.js"></script>
-    <!-- <script src="AI.js"></script>    -->
-    <script src="../GEMINI/AI.js"></script>
-    <!-- <script src="sync.js"></script> -->
-
-
-</script>
-    
 </body>
 </html>
-
-</body>
-</tml>
-

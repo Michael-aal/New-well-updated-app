@@ -29,18 +29,9 @@
             overlay.classList.remove('active');
         });
 
-        // Close right panel
-        closeRightPanel.addEventListener('click', () => {
-            rightPanel.classList.remove('active');
-            overlay.classList.remove('active');
-        });
 
         // Close on overlay click
-        overlay.addEventListener('click', () => {
-            sidebar.classList.remove('active');
-            rightPanel.classList.remove('active');
-            overlay.classList.remove('active');
-        });
+  
 
         // Handle window resize
         window.addEventListener('resize', () => {
@@ -92,3 +83,10 @@
         });
 
 
+
+// connection to firebase
+ 
+
+
+
+// Import the functions you need from the SDKs you need
