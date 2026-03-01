@@ -1,5 +1,5 @@
     async function SearchBTN() {
-      location.href = "browser.html"
+      location.href = "Browser.html"
              const  query = document.getElementById('query').value;
             const resultsDiv = document.getElementById('results');
             const Results = document.querySelector(".G_result")

@@ -89,16 +89,13 @@ body{
 
 
 
+    .mobile-menu-btns{
+        background-color: transparent;
+    }
 
-#toggleRightPanel{
-    color: transparent;
-}
-
-  .mobile-menu-btn{
-    background-color: transparent;
-  }
-
-
+    .mobile-menu-btns:hover{
+        background-color: #0a6235;
+    }
 
           /* Responsive */
         @media (max-width: 1279px) {

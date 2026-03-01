@@ -912,14 +912,7 @@ font-weight: 900;
                 display: none;
             }
             
-          .search-section{
-            width: 80%;
-           height: 40PX;
-           display: flex;
-           align-items: center;
-           gap: 100px;
-           justify-content: center;
-          }
+    
 .search_base{
                     width: 100%;    
                     height: 60vh;
@@ -959,7 +952,7 @@ font-weight: 900;
     
                 .search_base{
                     width: 100%;    
-                    height: 60vh;
+                    height: 80vh;
 
              display: flex;
              flex-direction: column;
@@ -1174,7 +1167,7 @@ font-weight: 900;
 
         .search_base{
                     width: 100%;    
-                    height: 60vh;
+                    height: 80vh;
         gap: 100px;
              display: flex;
              flex-direction: column;
