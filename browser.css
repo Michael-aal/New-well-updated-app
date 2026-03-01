@@ -87,7 +87,10 @@ body{
         border-radius: 7px;
       }
 
-
+#result
+{
+    border: none;
+}
 
     .mobile-menu-btns{
         background-color: transparent;
