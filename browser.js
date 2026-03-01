@@ -7,7 +7,7 @@
             const loading = document.getElementById('loading');
             const screen = document.querySelector(".screen")
             const Gremove = document.querySelector(".G_result")
-             Gremove.remove()
+            Gremove.style = "display: none;"
 
             if (!query) return;
 
