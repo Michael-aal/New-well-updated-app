@@ -773,6 +773,8 @@ font-weight: 900;
             width: fit-content;
         }
 
+
+
         .stat-card {
             background: #1a1d2e;
             border-radius: 12px;
@@ -829,6 +831,8 @@ font-weight: 900;
                 height: 100%;
                 transform: translateX(100%);
                 z-index: 40;
+
+                
             }
 
             .right-panel.active {

@@ -2,12 +2,12 @@
      
 
             const query = document.getElementById("querys").value
-            const resultsDiv = document.getElementById('results');
+            const resultsDiv = document.getElementById('result');
             const Results = document.querySelector(".G_result")
             const loading = document.getElementById('loading');
             const screen = document.querySelector(".screen")
-
-        
+            const Gremove = document.querySelector(".G_result")
+             Gremove.remove()
 
             if (!query) return;
 
