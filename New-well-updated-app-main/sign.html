@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qrypti — Create Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sign.css">
+  <script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Left Branding Panel -->
+    <div class="brand-panel">
+      <div class="brand-inner">
+        <div class="logo">
+          <div class="shield-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6L12 2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="logo-text">QRY<span class="accent">PTI</span></span>
+        </div>
+        <h1 class="headline">Join the<br><span class="accent">private web.</span></h1>
+        <p class="tagline">Create your Qrypti account and start browsing with complete privacy from day one.</p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="feature-dot"></span>Screenshot Protection</div>
+          <div class="feature-item"><span class="feature-dot"></span>Screen Share Invisibility</div>
+          <div class="feature-item"><span class="feature-dot"></span>Military-Grade Encryption</div>
+        </div>
+      </div>
+      <div class="glow-orb"></div>
+    </div>
+
+    <!-- Right Form Panel -->
+    <div class="form-panel">
+      <div class="form-card">
+        <h2 class="form-title">Create account</h2>
+        <p class="form-sub">Get started with Qrypti — it's free</p>
+
+        <div class="field-group">
+
+          <div class="field">
+            <input type="email" id="email" class="input" placeholder=" " autocomplete="off">
+            <label for="email" class="label">Email address</label>
+          </div>
+
+          <div class="field has-strength">
+            <input type="password" id="password" class="input" placeholder=" " autocomplete="off" minlength="6" oninput="checkStrength(this.value)">
+            <label for="password" class="label">Password</label>
+            <button type="button" class="eye-btn" onclick="togglePwd(this)">
+              <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </button>
+            <div class="strength-wrap">
+              <div class="strength-bar">
+                <div class="seg" id="s1"></div>
+                <div class="seg" id="s2"></div>
+                <div class="seg" id="s3"></div>
+                <div class="seg" id="s4"></div>
+              </div>
+              <span class="strength-label" id="strengthText"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="password" id="confirmPassword" class="input" placeholder=" " autocomplete="off" minlength="6">
+            <label for="confirmPassword" class="label">Confirm password</label>
+            <button type="button" class="eye-btn" onclick="togglePwd(this)">
+              <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </button>
+          </div>
+
+        </div>
+
+        <button class="btn-primary" type="button">
+          <span>Create Account</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <p class="switch-text">Already have an account? <a href="login.html" class="link-green">Sign in</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function togglePwd(btn) {
+      const input = btn.closest('.field').querySelector('input');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      btn.querySelector('.eye-open').style.display = input.type === 'text' ? 'none' : '';
+      btn.querySelector('.eye-closed').style.display = input.type === 'text' ? '' : 'none';
+    }
+    function checkStrength(val) {
+      const segs = ['s1','s2','s3','s4'].map(id => document.getElementById(id));
+      const label = document.getElementById('strengthText');
+      let score = 0;
+      if (val.length >= 6) score++;
+      if (val.length >= 10) score++;
+      if (/[A-Z]/.test(val) && /[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
+      const colors = ['#ef4444','#f97316','#eab308','#00ff66'];
+      const labels = ['Weak','Fair','Good','Strong'];
+      segs.forEach((s, i) => { s.style.background = i < score ? colors[score-1] : 'rgba(255,255,255,0.08)'; });
+      label.textContent = score > 0 ? labels[score-1] : '';
+      label.style.color = score > 0 ? colors[score-1] : '';
+    }
+  </script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="sign.js"></script>
+</body>
+</html>

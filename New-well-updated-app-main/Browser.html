@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qrypti Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="browser.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+<div class="browser-container">
+
+  <!-- ── Header ── -->
+  <header class="browser-header">
+    <div class="header-left">
+      <button class="icon-btn mobile-only" id="toggleSidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="logo">
+        <div class="logo-shield">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6L12 2z"/></svg>
+        </div>
+        <span class="logo-text">QRY<span class="accent">PTI</span></span>
+      </div>
+    </div>
+
+    <div class="header-search">
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" id="querys" type="text" placeholder="Search or enter URL…" autocomplete="off">
+        <button class="search-btn" onclick="SearchBTN()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn mobile-only" id="toggleRightPanel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
+      </button>
+      <div class="user-avatar">M</div>
+    </div>
+  </header>
+
+  <!-- ── Mobile Menu Bar ── -->
+  <div class="mobile-menu-bar" id="mobileMenuBar">
+    <div class="mobile-search">
+      <input class="mobile-search-input" type="text" placeholder="Search…" autocomplete="off">
+    </div>
+  </div>
+
+  <!-- ── Layout ── -->
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeSidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="sidebar-content">
+
+        <!-- Workspaces -->
+        <div class="sidebar-section-title">Workspaces</div>
+        <div class="workspace-item active">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Work</span>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="workspace-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="workspace-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Private</span>
+        </div>
+
+        <!-- Privacy Features -->
+        <div class="sidebar-section-title" style="margin-top:20px">Privacy Shield</div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">VPN</span>
+            <span class="toggle-meta">78.05 Mbps</span>
+          </div>
+          <div class="toggle-switch"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Screenshot Protect</span>
+          </div>
+          <div class="toggle-switch screenshot"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.82v6.362a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Screen Share Invis.</span>
+          </div>
+          <div class="toggle-switch screenshare"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Ads Blocker Pro</span>
+          </div>
+          <div class="toggle-switch Ads"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Invisible Email</span>
+          </div>
+          <div class="toggle-switch invisible"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Pin & Color Tabs</span>
+          </div>
+          <div class="toggle-switch Pin"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Private Mode</span>
+          </div>
+          <div class="toggle-switch Private"></div>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="toggle-info">
+            <span class="toggle-name">Zero Performance</span>
+          </div>
+          <div class="toggle-switch zero"></div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+          <button class="icon-btn">+</button>
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </button>
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content screen">
+
+      <!-- Welcome State -->
+      <div class="welcome-state G_result">
+        <div class="welcome-shield">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6L12 2z"/></svg>
+        </div>
+        <h2 class="welcome-title">QRYPTI BROWSER</h2>
+        <p class="welcome-sub">Search privately. Browse freely.</p>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:#3b82f6">B</div>
+            <span>Behance</span>
+          </a>
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:#ec4899">D</div>
+            <span>Dribbble</span>
+          </a>
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:#8b5cf6">F</div>
+            <span>Figma</span>
+          </a>
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:linear-gradient(135deg,#fbbf24,#ec4899,#8b5cf6)">I</div>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:#dc2626">Y</div>
+            <span>YouTube</span>
+          </a>
+          <a href="#" class="quick-link">
+            <div class="quick-icon" style="background:#1e40af">L</div>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading-state" style="display:none">
+        <div class="spinner"></div>
+        <span>Searching securely…</span>
+      </div>
+
+      <!-- Results -->
+      <div id="result" class="results-area"></div>
+
+    </main>
+
+  </div>
+</div>
+
+<script src="browser.js"></script>
+</body>
+</html>

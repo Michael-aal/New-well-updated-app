@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qrypti — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Left Branding Panel -->
+    <div class="brand-panel">
+      <div class="brand-inner">
+        <div class="logo">
+          <div class="shield-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6L12 2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="logo-text">QRY<span class="accent">PTI</span></span>
+        </div>
+
+        <h1 class="headline">Privacy,<br><span class="accent">Redefined.</span></h1>
+        <p class="tagline">Military-grade protection for everything you do online. No trackers. No compromises.</p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            VPN Built-in
+          </div>
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            Zero-Log Policy
+          </div>
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            Ad Blocker Pro
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-orb"></div>
+    </div>
+
+    <!-- Right Form Panel -->
+    <div class="form-panel">
+      <div class="form-card">
+        <h2 class="form-title">Welcome back</h2>
+        <p class="form-sub">Sign in to your Qrypti account</p>
+
+        <div class="field-group">
+          <div class="field">
+            <input type="email" id="email" class="input" placeholder=" " autocomplete="off">
+            <label for="email" class="label">Email address</label>
+          </div>
+
+          <div class="field">
+            <input type="password" id="password" class="input" placeholder=" " autocomplete="off">
+            <label for="password" class="label">Password</label>
+            <button type="button" class="eye-btn" onclick="togglePwd(this)">
+              <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="row-between">
+          <label class="remember-label">
+            <input type="checkbox" id="remember" class="checkbox">
+            <span class="checkmark"></span>
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="link-muted">Forgot password?</a>
+        </div>
+
+        <button class="btn-primary" onclick="Login()">
+          <span>Sign In</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <div class="divider"><span>or</span></div>
+
+        <p class="switch-text">Don't have an account? <a href="sign.html" class="link-green">Create one</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function togglePwd(btn) {
+      const input = btn.closest('.field').querySelector('input');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      btn.querySelector('.eye-open').style.display = input.type === 'text' ? 'none' : '';
+      btn.querySelector('.eye-closed').style.display = input.type === 'text' ? '' : 'none';
+    }
+  </script>
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(netstat -ano)",
+      "Read(//c/Users/Lenovo/Desktop/New-well-updated-app-main/**)",
+      "Bash(xargs -I{} taskkill /PID {} /F)",
+      "Bash(node server.js)",
+      "Bash(findstr \":5000\")",
+      "Bash(taskkill /PID 39388 /F)",
+      "Bash(cmd /c \"taskkill /PID 39388 /F\")",
+      "Bash(cmd /c \"taskkill /PID 39388 /F && echo killed\")",
+      "Bash(powershell -Command \"Stop-Process -Id 39388 -Force; Start-Sleep 1; Set-Location ''C:\\\\Users\\\\Lenovo\\\\Desktop\\\\New-well-updated-app-main\\\\New-well-updated-app-main''; node server.js\")",
+      "Bash(powershell -Command \"Stop-Process -Id \\(Get-NetTCPConnection -LocalPort 5000 -ErrorAction SilentlyContinue\\).OwningProcess -Force -ErrorAction SilentlyContinue; Start-Sleep 1; Set-Location ''C:\\\\Users\\\\Lenovo\\\\Desktop\\\\New-well-updated-app-main\\\\New-well-updated-app-main''; node server.js\")",
+      "Bash(__NEW_LINE_9033107a287c85d1__ sed -i \"s/.btn-ghost:hover { border-color: var\\(--green\\);/.btn-ghost:hover { border-color: rgba\\(255,255,255,0.25\\);/\" main.css)",
+      "Bash(sed -i \"s/.search { cursor: pointer; color: var\\(--green\\);/.search { cursor: pointer; color: var\\(--text\\);/\" main.css)",
+      "Bash(sed -i \"s/.download_box .icon { font-size: 20px; color: var\\(--green\\);/.download_box .icon { font-size: 20px; color: var\\(--text-muted\\);/\" main.css)",
+      "Bash(__NEW_LINE_9033107a287c85d1__ echo \"done\")"
+    ]
+  }
+}

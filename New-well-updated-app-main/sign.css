@@ -1,0 +1,207 @@
+:root {
+  --green: #00ff66;
+  --accent: #ffffff;
+  --accent-dim: #d4d4d4;
+  --green-dim: #00cc52;
+  --green-glow: rgba(0, 255, 102, 0.12);
+  --bg-0: #060810;
+  --bg-1: #0d1117;
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --radius: 14px;
+  --font: 'Inter', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-0);
+  color: var(--text);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.layout { display: flex; height: 100vh; }
+
+/* ── Brand Panel ── */
+.brand-panel {
+  flex: 1;
+  background: var(--bg-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.brand-inner { position: relative; z-index: 2; padding: 48px; max-width: 440px; }
+
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 65%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.logo { display: flex; align-items: center; gap: 12px; margin-bottom: 56px; }
+
+.shield-icon {
+  width: 38px; height: 38px;
+  color: var(--accent);
+  filter: none;
+}
+.shield-icon svg { width: 100%; height: 100%; }
+
+.logo-text { font-size: 20px; font-weight: 800; letter-spacing: 0.1em; }
+.accent { color: var(--green); }
+
+.headline { font-size: 50px; font-weight: 800; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px; }
+.tagline { font-size: 15px; line-height: 1.75; color: var(--text-muted); margin-bottom: 40px; }
+
+.feature-list { display: flex; flex-direction: column; gap: 14px; }
+.feature-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted); font-weight: 500; }
+.feature-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-muted); flex-shrink: 0; }
+
+/* ── Form Panel ── */
+.form-panel {
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  background: var(--bg-1);
+  overflow-y: auto;
+}
+
+.form-card { width: 100%; max-width: 360px; }
+
+.form-title { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+.form-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+/* ── Fields ── */
+.field-group { display: flex; flex-direction: column; gap: 18px; margin-bottom: 20px; }
+
+.field { position: relative; }
+
+.input {
+  width: 100%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 20px 44px 8px 16px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+}
+
+.input:focus { border-color: rgba(255, 255, 255, 0.25); box-shadow: none; }
+
+.label {
+  position: absolute;
+  top: 50%; left: 16px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: all 0.18s ease;
+}
+
+/* When field has strength meter, offset label center */
+.has-strength .label { top: 38%; }
+
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+  top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  transform: none;
+}
+
+/* ── Eye Button ── */
+.eye-btn {
+  position: absolute;
+  right: 14px; top: 28px;
+  background: none; border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  display: flex; align-items: center;
+  width: auto;
+  transition: color 0.2s;
+}
+.eye-btn svg { width: 18px; height: 18px; }
+.eye-btn:hover { color: var(--accent); background: none; box-shadow: none; }
+
+/* ── Strength Meter ── */
+.strength-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 0 2px;
+}
+
+.strength-bar {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.seg {
+  flex: 1;
+  height: 3px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.3s;
+}
+
+.strength-label { font-size: 11px; font-weight: 600; min-width: 36px; transition: color 0.3s; }
+
+/* ── Button ── */
+.btn-primary {
+  width: 100%;
+  padding: 14px 20px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  margin-bottom: 20px;
+}
+.btn-primary svg { width: 18px; height: 18px; }
+.btn-primary:hover {
+  background: var(--text);
+  color: var(--bg-0);
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+.btn-primary:active { transform: translateY(0); }
+
+/* ── Switch Text ── */
+.switch-text { text-align: center; font-size: 13px; color: var(--text-muted); }
+.link-green { color: var(--accent); text-decoration: none; font-weight: 500; }
+.link-green:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  body { overflow: auto; }
+  .layout { flex-direction: column; height: auto; min-height: 100vh; }
+  .brand-panel { display: none; }
+  .form-panel { width: 100%; padding: 40px 24px; min-height: 100vh; overflow: visible; }
+}

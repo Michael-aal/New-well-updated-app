@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qrypti Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4d39e4a0f3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="browser-container">
+
+  <!-- ── Nav Bar ── -->
+  <nav class="nav-bar">
+    <a class="logo" href="#">
+      <div class="logo-shield">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6L12 2z"/></svg>
+      </div>
+      <span class="logo-text">QRY<span class="accent">PTI</span></span>
+    </a>
+    <div class="nav-actions">
+      <a href="login.html" class="btn-ghost">Sign in</a>
+      <a href="Browser.html" class="btn-green">Open Browser</a>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu Bar ── -->
+  <div class="mobile-menu-bar">
+    <button class="mobile-menu-btn" id="toggleSidebar">☰</button>
+    <button class="mobile-menu-btn" id="toggleRightPanel">· · ·</button>
+  </div>
+
+  <!-- ── Main Layout ── -->
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeSidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="sidebar-content">
+
+        <div class="section-title">Workspaces</div>
+        <div class="workspace-item active">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Work</span>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="workspace-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="workspace-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Private</span>
+        </div>
+
+        <div class="section-title" style="margin-top:16px">Shortcuts</div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon blue">B</div><span>Behance</span>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon pink">D</div><span>Dribbble</span>
+          <div class="notification-dot green" style="margin-left:auto"></div>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon purple">F</div><span>Figma</span>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon instagram">I</div><span>Instagram</span>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon red">P</div><span>Pinterest</span>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon blue">Y</div><span>YouTube</span>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon linkedin">L</div><span>LinkedIn</span>
+          <div class="notification-dot green" style="margin-left:auto"></div>
+        </div>
+        <div class="shortcut-item">
+          <div class="shortcut-icon gray">+</div><span>Add</span>
+        </div>
+
+        <div class="section-title" style="margin-top:16px">Privacy Shield</div>
+        <div class="vpn-section">
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">VPN</span><span class="toggle-meta">78.05 Mbps</span></div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Screenshot Protect</span></div>
+            <div class="toggle-switch screenshot"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Screen Share Invis.</span></div>
+            <div class="toggle-switch screenshare"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Ads Blocker Pro</span></div>
+            <div class="toggle-switch Ads"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Invisible Email</span></div>
+            <div class="toggle-switch invisible"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Pin & Color Tabs</span></div>
+            <div class="toggle-switch Pin"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Private Mode</span></div>
+            <div class="toggle-switch Private"></div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="toggle-info"><span class="toggle-name">Zero Performance</span></div>
+            <div class="toggle-switch zero"></div>
+          </div>
+        </div>
+
+        <div class="sidebar-bottom">
+          <button class="nav-btn">+</button>
+          <button class="nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </button>
+          <button class="nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content screen">
+      <div class="content-wrapper">
+        <div class="search_base">
+
+          <!-- Shield -->
+          <div class="shield-status">
+            <div class="shield-icon">
+              <div class="shield-glow"></div>
+              <div class="shield-circle">
+                <svg class="shield-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="trackers-blocked">QRYPTI SEARCH</div>
+          </div>
+
+          <!-- Search -->
+          <div class="search-section">
+            <div class="main-search">
+              <a class="link" href="Browser.html">
+                <div class="search" onclick="SearchBTN()">Search now</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Download Banner -->
+          <div class="download_box">
+            <div class="icon"><i class="fa-solid fa-download"></i></div>
+            <div class="text">Get our free browser for even more privacy.</div>
+            <div class="btn">
+              <button class="Download">Download Browser <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="engine-card">
+            <div class="quick-links">
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:#3b82f6">B</div><div class="quick-link-name">Behance</div></a>
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:#ec4899">D</div><div class="quick-link-name">Dribbble</div></a>
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:#8b5cf6">F</div><div class="quick-link-name">Figma</div></a>
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:linear-gradient(135deg,#fbbf24,#ec4899,#8b5cf6)">I</div><div class="quick-link-name">Instagram</div></a>
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:#dc2626">Y</div><div class="quick-link-name">YouTube</div></a>
+              <a href="#" class="quick-link"><div class="quick-link-icon" style="background:#1e40af">L</div><div class="quick-link-name">LinkedIn</div></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="featured-section">
+          <div class="featured-header">
+            <div class="section-title">
+              <h2>Military-Grade <span class="gradient-text">Privacy Features</span></h2>
+              <p class="text-lead">Protection that actually works when you need it most</p>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <div class="card fade-in-up">
+              <span class="icon">🛡️</span>
+              <h3>Screenshot Protection</h3>
+              <p>All dialogs are completely invisible to screenshots, screen recording software, and malware capture attempts.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">📹</span>
+              <h3>Screen Share Invisibility</h3>
+              <p>Share your screen on Zoom or Teams without worry. Sensitive windows appear as black screens to viewers.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">🔒</span>
+              <h3>Password Manager</h3>
+              <p>Built-in encrypted password manager with show/hide toggle. Save, manage, and auto-fill passwords securely.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">🚫</span>
+              <h3>Ad Blocker Pro</h3>
+              <p>Advanced ad blocker with real-time counter. Blocks ads while allowing video content. Fast, efficient, invisible.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">📥</span>
+              <h3>Download Manager</h3>
+              <p>Full-featured download manager with pause/resume, history tracking, and file organization.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">✉️</span>
+              <h3>Invisible Email</h3>
+              <p>Send emails invisibly during screen shares. Perfect for discreet communication without anyone knowing.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">📌</span>
+              <h3>Pin & Color Tabs</h3>
+              <p>Pin important tabs and color-code them for instant recognition. Organize your workflow like never before.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">🔐</span>
+              <h3>Private Mode</h3>
+              <p>True private browsing with no history, cookies, or cache. Leave no trace behind when you need maximum privacy.</p>
+            </div>
+            <div class="card fade-in-up">
+              <span class="icon">⚡</span>
+              <h3>Zero Performance Impact</h3>
+              <p>Built with efficiency in mind. All protection features run with zero noticeable performance impact.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<script type="module" src="main.js"></script>
+<script src="../security features/SSI.JS"></script>
+<script src="../security features/SSP.js"></script>
+<script src="../Search Engine/api.js"></script>
+<script src="../GEMINI/AI.js"></script>
+</body>
+</html>
