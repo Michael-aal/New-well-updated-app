@@ -1,0 +1,122 @@
+PRODUCT REQUIREMENT DOCUMENT.
+
+
+1.Product overview
+A webapp Browser-based encrypted searcch platform, 
+that has better secuity features and SAAS tools.
+
+
+2. Problem Statement
+Users are concerned about privacy when browsing. Existing browsers do not prevent screenshots or screen recording within web environments.
+`
+
+3. Target Users
+
+Primary users
+
+Secondary users
+
+Age group
+
+Technical level
+
+Example:
+
+Students
+
+Developers
+
+Privacy-focused users
+
+
+
+
+4. Product Goals & Objectives
+
+Reduce data exposure risk
+
+Implement encryption for stored data
+
+Block screen capture attempts
+
+Achieve under 2s load time
+
+
+5. Features
+
+
+Core Features (MVP)
+
+Secure login
+
+Encryption engine
+
+Search results rendering
+
+Screenshot detection
+
+
+Secondary Features
+
+Dark mode
+
+
+6. Functional Requirements
+
+When user clicks search:
+
+Input is validated
+
+Query is encrypted
+
+Request sent to backend
+
+Results displayed
+
+If screen recording detected:
+
+Blur screen
+
+Show warning
+
+Disable interaction
+
+
+7. Non-Functional Requirements
+
+Examples:
+
+Load time < 2 seconds
+
+AES-256 encryption
+
+Mobile responsive
+
+Supports Chrome, Edge, Firefox
+
+Server uptime 99%
+
+
+8. Technical Stack
+
+Frontend: HTML, CSS, JavaScript
+
+Backend: Node.js + Express
+
+Database: MySQL (XAMPP) or MongoDB
+
+APIs: Serper / Gemini
+
+Hosting: (to be decided)
+
+9. User Flow
+
+User opens homepage
+
+Logs in
+
+Searches
+
+Views results
+
+System encrypts logs
